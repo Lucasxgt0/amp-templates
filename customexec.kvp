@@ -1,0 +1,19 @@
+Meta.DisplayName=Custom Executable
+Meta.Author=Luk
+Meta.ParentModule=Generic
+Meta.Description=Module generique pour lancer n'importe quel executable/commande dans un conteneur AMP, avec logs visibles dans la console AMP.
+Meta.SpecificDockerImage=cubecoders/ampbase:debian
+Meta.ExtraContainerPackages=[]
+Meta.ConfigManifest=customexecconfig.json
+Meta.TargetPlatforms=Linux
+
+App.ExecutableLinux=/bin/bash
+App.CommandLineArgs=-c "{{Command}}"
+App.WorkingDir={{$FullBaseDir}}
+App.HasReadableConsole=True
+App.ApplicationReadyMode=RegexMatch
+App.Ports=@IncludeJson[customexecports.json]
+
+Console.AppReadyRegex=.+
+
+Limits.MaxUsers=1
