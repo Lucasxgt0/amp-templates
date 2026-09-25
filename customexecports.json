@@ -1,0 +1,25 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 8080,
+        "Ref": "ApplicationPort1",
+        "Name": "Port principal",
+        "Description": "Port principal de l'application",
+        "ChildPorts": [
+            {
+                "Protocol": "TCP",
+                "Port": 8081,
+                "Ref": "ApplicationPort2",
+                "Name": "Port secondaire",
+                "Description": "Port secondaire (optionnel)"
+            },
+            {
+                "Protocol": "TCP",
+                "Port": 8082,
+                "Ref": "ApplicationPort3",
+                "Name": "Port tertiaire",
+                "Description": "Port tertiaire (optionnel)"
+            }
+        ]
+    }
+]
