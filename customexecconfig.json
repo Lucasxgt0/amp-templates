@@ -1,0 +1,15 @@
+[
+    {
+        "DisplayName": "Commande a executer",
+        "Description": "La commande complete a lancer dans le conteneur (chemin de l'executable + arguments). Exemple : /usr/bin/syncthing --no-browser --gui-address=0.0.0.0:8384 --home=/AMP/config",
+        "FieldName": "Command",
+        "InputType": "text",
+        "Category": "Custom Executable",
+        "Subcategory": "General",
+        "ParamFieldName": "",
+        "IncludeInCommandLine": false,
+        "Required": true,
+        "DefaultValue": "",
+        "Placeholder": "/usr/bin/mon-programme --option valeur"
+    }
+]
